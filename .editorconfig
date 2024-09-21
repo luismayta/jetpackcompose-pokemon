@@ -51,8 +51,6 @@ indent_style = tab
 
 # Minified JavaScript files shouldn't be changed
 [**.min.js]
-indent_style = ignore
-insert_final_newline = ignore
 
 # Tab indentation (no size specified)
 [Makefile]

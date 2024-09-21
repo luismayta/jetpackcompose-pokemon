@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://github.com/luismayta/template-project",
+  "baseUrl": "https://github.com/luismayta/jetpackcompose-pokemon",
   "ignorePatterns": [
     {
       "pattern": "^https://hadenlabs.com"
@@ -9,7 +9,12 @@
     {
       "pattern": "^/docs",
       "replacement": "{{BASEURL}}/docs"
+    },
+    {
+      "pattern": "^/",
+      "replacement": "{{BASEURL}}/"
     }
+
   ],
   "timeout": "20s",
   "retryCount": 3,

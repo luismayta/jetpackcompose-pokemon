@@ -1,14 +1,14 @@
 [tool.poetry]
-name = "template-project"
+name = "jetpackcompose-pokemon"
 version = "0.0.0"
-description = "base template"
+description = "jetpackcompose-pokemon"
 authors = ["Luis Mayta <luis@hadenlabs.com>"]
 license = "LGPL-3.0"
 readme = "README.md"
-repository = "https://github.com/luismayta/template-project"
+repository = "https://github.com/luismayta/jetpackcompose-pokemon"
 
 [tool.poetry.dependencies]
-python = "^3.8,<3.12"
+python = "^3.9,<3.12"
 boto3 = "^1.26.130"
 
 [tool.poetry.group.dev.dependencies]

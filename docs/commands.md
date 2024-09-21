@@ -1,7 +1,7 @@
 <!-- Space: Projects -->
-<!-- Parent: TemplateProject -->
-<!-- Title: Commands TemplateProject -->
-<!-- Label: TemplateProject -->
+<!-- Parent: JetpackComposePokemon -->
+<!-- Title: Commands JetpackComposePokemon -->
+<!-- Label: JetpackComposePokemon -->
 <!-- Label: Project -->
 <!-- Label: Commands -->
 <!-- Include: disclaimer.md -->

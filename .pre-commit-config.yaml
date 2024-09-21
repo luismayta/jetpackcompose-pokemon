@@ -85,6 +85,8 @@ repos:
           (?x)^(
             .+\.provision/git/hooks/prepare-commit-msg$|
             .+\.tpl.sh$|
+            gradlew$|
+            gradlew.bat$|
           )$
         args:
           - --exclude=SC1072,SC1073,SC2068

@@ -1,7 +1,7 @@
 <!-- Space: Projects -->
-<!-- Parent: TemplateProject -->
-<!-- Title: Releasing TemplateProject -->
-<!-- Label: TemplateProject -->
+<!-- Parent: JetpackComposePokemon -->
+<!-- Title: Releasing JetpackComposePokemon -->
+<!-- Label: JetpackComposePokemon -->
 <!-- Label: Project -->
 <!-- Label: Releasing -->
 <!-- Include: disclaimer.md -->
@@ -11,7 +11,7 @@
 
 ## Bump a new version
 
-Make a new version of template-project in the following steps:
+Make a new version of jetpackcompose-pokemon in the following steps:
 
 ### Generate version major
 

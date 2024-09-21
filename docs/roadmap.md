@@ -1,6 +1,6 @@
 <!-- Space: Projects -->
-<!-- Parent: TemplateProject -->
-<!-- Title: Roadmap TemplateProject -->
+<!-- Parent: JetpackComposePokemon -->
+<!-- Title: Roadmap JetpackComposePokemon -->
 <!-- Label: Roadmap -->
 <!-- Include: disclaimer.md -->
 <!-- Include: ac:toc -->
@@ -29,7 +29,7 @@
 
 The Roadmap is a list of all the things we're working on for the year.
 
-You can see the corresponding projects on [template-project](https://github.com/luismayta/template-project)
+You can see the corresponding projects on [jetpackcompose-pokemon](https://github.com/luismayta/jetpackcompose-pokemon)
 
 ## Legend
 

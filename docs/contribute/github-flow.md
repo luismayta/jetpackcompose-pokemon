@@ -1,14 +1,14 @@
 <!-- Space: Projects -->
-<!-- Parent: TemplateProject -->
-<!-- Title: Contributing GithubFlow TemplateProject -->
-<!-- Label: TemplateProject -->
+<!-- Parent: JetpackComposePokemon -->
+<!-- Title: Contributing GithubFlow JetpackComposePokemon -->
+<!-- Label: JetpackComposePokemon -->
 <!-- Label: Project -->
 <!-- Label: Contributing -->
 <!-- Label: GithubFlow -->
 <!-- Include: ./../disclaimer.md -->
 <!-- Include: ac:toc -->
 
-To contribute to template-project project on [GitHub](https://github.com/luismayta/template-project), We use [GitHub Flow](https://githubflow.github.io/), it means that you should branch from the main repository and contribute back by making [pull request](https://github.com/luismayta/template-project/pulls).
+To contribute to jetpackcompose-pokemon project on [GitHub](https://github.com/luismayta/jetpackcompose-pokemon), We use [GitHub Flow](https://githubflow.github.io/), it means that you should branch from the main repository and contribute back by making [pull request](https://github.com/luismayta/jetpackcompose-pokemon/pulls).
 
 GitHub Flow is very lightweight (especially compared to GitFlow). This workflow uses only two kinds of branches:
 
@@ -23,7 +23,7 @@ For more information see [GitHub Flow](https://githubflow.github.io/)
 
 ## Getting started
 
-To follow the instructions in this guide and start contributing to template-project project on GitHub:
+To follow the instructions in this guide and start contributing to jetpackcompose-pokemon project on GitHub:
 
 1. **Fork** the repo on GitHub
 2. **Clone** the project to your own machine
@@ -31,10 +31,10 @@ To follow the instructions in this guide and start contributing to template-proj
 To synchronize with the main repository, add it to the remotes:
 
 ```bash
-git remote add upstream  https://github.com/luismayta/template-project.git
+git remote add upstream  https://github.com/luismayta/jetpackcompose-pokemon.git
 ```
 
-Now your **upstream** points to **luismayta/template-project**.
+Now your **upstream** points to **luismayta/jetpackcompose-pokemon**.
 
 ## Branches
 
@@ -58,7 +58,7 @@ To resolve a conflict, run the following commands.
 
 ```bash
 # checkout a branch you open PR from
-git fetch upstream # assuming upstream is luismayta/template-project
+git fetch upstream # assuming upstream is luismayta/jetpackcompose-pokemon
 git merge upstream/merge_branch # Where merge_branch is a branch you open merge request against.
 # resolve merge requests
 git add changed_files
@@ -70,7 +70,7 @@ Github will automatically update your pull request.
 
 ### Testing
 
-All merge requests are automatically tested using [Github Actions](https://github.com/luismayta/template-project/actions). In case some tests fail, fix the issues or describe why the fix cannot be done.
+All merge requests are automatically tested using [Github Actions](https://github.com/luismayta/jetpackcompose-pokemon/actions). In case some tests fail, fix the issues or describe why the fix cannot be done.
 
 ### Review
 

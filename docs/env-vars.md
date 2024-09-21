@@ -1,7 +1,7 @@
 <!-- Space: Projects -->
-<!-- Parent: TemplateProject -->
-<!-- Title: EnvVars TemplateProject -->
-<!-- Label: TemplateProject -->
+<!-- Parent: JetpackComposePokemon -->
+<!-- Title: EnvVars JetpackComposePokemon -->
+<!-- Label: JetpackComposePokemon -->
 <!-- Label: Project -->
 <!-- Label: EnvVars -->
 <!-- Include: disclaimer.md -->

@@ -1,9 +1,9 @@
 # This is an example goreleaser.yaml file with some sane defaults.
 # Make sure to check the documentation at http://goreleaser.com
-project_name: template-project
+project_name: jetpackcompose-pokemon
 env:
   - GO111MODULE=on
-  - REPO=github.com/luismayta/template-project
+  - REPO=github.com/luismayta/jetpackcompose-pokemon
 before:
   hooks:
     - go mod download
@@ -67,7 +67,7 @@ changelog:
 release:
   github:
     owner: hadenlabs
-    name: template-project
+    name: jetpackcompose-pokemon
   draft: true
   prerelease: auto
   name_template: "{{.ProjectName}}-v{{.Version}}-{{.ShortCommit}}-{{.Date}}"

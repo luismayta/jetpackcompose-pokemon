@@ -3,5 +3,5 @@
 ## Replace name project to New Project
 
 ```bash
-agr 'template-project' 'new-project'
+agr 'jetpackcompose-pokemon' 'new-project'
 ```

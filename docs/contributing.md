@@ -1,18 +1,18 @@
 <!-- Space: Projects -->
-<!-- Parent: TemplateProject -->
-<!-- Title: Contributing TemplateProject -->
-<!-- Label: TemplateProject -->
+<!-- Parent: JetpackComposePokemon -->
+<!-- Title: Contributing JetpackComposePokemon -->
+<!-- Label: JetpackComposePokemon -->
 <!-- Label: Contributing -->
 <!-- Include: disclaimer.md -->
 <!-- Include: ac:toc -->
 
 # How To Contribute
 
-Contributions to template-project are welcome.
+Contributions to jetpackcompose-pokemon are welcome.
 
 Feel free to use all of the contribution options:
 
-- Contribute to template-project repositories on [GitHub](https://github.com/luismayta/template-project). See [Git flow](./contribute/github-flow.md).
+- Contribute to jetpackcompose-pokemon repositories on [GitHub](https://github.com/luismayta/jetpackcompose-pokemon). See [Git flow](./contribute/github-flow.md).
 
 ## Getting Started
 
@@ -73,7 +73,7 @@ See [Git flow](./contribute/github-flow.md).
 
 ### Documentation
 
-Documentation is a part of the template-project code base. You can find the documentation files in the `doc/` subdirectory of the [main repository](https://github.com/luismayta/template-project). This means that the contribution process is the same for both the source code and documentation.
+Documentation is a part of the jetpackcompose-pokemon code base. You can find the documentation files in the `doc/` subdirectory of the [main repository](https://github.com/luismayta/jetpackcompose-pokemon). This means that the contribution process is the same for both the source code and documentation.
 
 ### Testing
 
@@ -81,15 +81,15 @@ See [Testing](./testing.md).
 
 ### Code Submission
 
-1.  See if a [Pull Request](https://github.com/luismayta/template-project/pulls) exists
+1.  See if a [Pull Request](https://github.com/luismayta/jetpackcompose-pokemon/pulls) exists
     - Add some comments or review the code to help it along
     - Don\'t be afraid to comment when logic needs clarification
-2.  Create a Fork and open a [Pull Request](https://github.com/luismayta/template-project/pulls) if needed
+2.  Create a Fork and open a [Pull Request](https://github.com/luismayta/jetpackcompose-pokemon/pulls) if needed
 
 ### Code Review
 
 - Anyone can review code
-- Any [Pull Request](https://github.com/luismayta/template-project/pulls) should be closed or merged within a week
+- Any [Pull Request](https://github.com/luismayta/jetpackcompose-pokemon/pulls) should be closed or merged within a week
 
 ### Code Acceptance
 

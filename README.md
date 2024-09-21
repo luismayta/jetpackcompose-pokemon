@@ -12,11 +12,11 @@
 
   -->
 
-[![Latest Release](https://img.shields.io/github/release/luismayta/template-project)](https://github.com/luismayta/template-project/releases) [![Lint](https://img.shields.io/github/workflow/status/luismayta/template-project/lint-code)](https://github.com/luismayta/template-project/actions?workflow=lint-code) [![CI](https://img.shields.io/github/workflow/status/luismayta/template-project/ci)](https://github.com/luismayta/template-project/actions?workflow=ci) [![Test](https://img.shields.io/github/workflow/status/luismayta/template-project/test)](https://github.com/luismayta/template-project/actions?workflow=test) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow)](https://conventionalcommits.org) [![KeepAChangelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.0.0-orange)](https://keepachangelog.com)
+[![Latest Release](https://img.shields.io/github/release/luismayta/jetpackcompose-pokemon)](https://github.com/luismayta/jetpackcompose-pokemon/releases) [![Lint](https://img.shields.io/github/workflow/status/luismayta/jetpackcompose-pokemon/lint-code)](https://github.com/luismayta/jetpackcompose-pokemon/actions?workflow=lint-code) [![CI](https://img.shields.io/github/workflow/status/luismayta/jetpackcompose-pokemon/ci)](https://github.com/luismayta/jetpackcompose-pokemon/actions?workflow=ci) [![Test](https://img.shields.io/github/workflow/status/luismayta/jetpackcompose-pokemon/test)](https://github.com/luismayta/jetpackcompose-pokemon/actions?workflow=test) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow)](https://conventionalcommits.org) [![KeepAChangelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.0.0-orange)](https://keepachangelog.com)
 
-# template-project
+# jetpackcompose-pokemon
 
-template-project for project
+jetpackcompose-pokemon for project
 
 ## Requirements
 
@@ -33,14 +33,14 @@ This is a list of plugins that need to be installed previously to enjoy all the 
 ## Replace name project to New Project
 
 ```bash
-agr 'template-project' 'new-project'
+agr 'jetpackcompose-pokemon' 'new-project'
 ```
 
 ## Examples
 
 <!-- Space: Projects -->
-<!-- Parent: TemplateProject -->
-<!-- Title: Examples TemplateProject -->
+<!-- Parent: JetpackComposePokemon -->
+<!-- Title: Examples JetpackComposePokemon -->
 <!-- Label: Examples -->
 <!-- Include: ./../disclaimer.md -->
 <!-- Include: ac:toc -->
@@ -51,7 +51,7 @@ agr 'template-project' 'new-project'
 
 **Got a question?**
 
-File a GitHub [issue](https://github.com/luismayta/template-project/issues).
+File a GitHub [issue](https://github.com/luismayta/jetpackcompose-pokemon/issues).
 
 ## Contributing
 
@@ -84,6 +84,6 @@ All other trademarks referenced herein are the property of their respective owne
 
 The code and styles are licensed under the LGPL-3.0 license [See project license.](LICENSE).
 
-## Don't forget to 🌟 Star 🌟 the repo if you like template-project
+## Don't forget to 🌟 Star 🌟 the repo if you like jetpackcompose-pokemon
 
-[Your feedback is appreciated](https://github.com/luismayta/template-project/issues)
+[Your feedback is appreciated](https://github.com/luismayta/jetpackcompose-pokemon/issues)

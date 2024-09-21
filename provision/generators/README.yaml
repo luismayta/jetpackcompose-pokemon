@@ -5,7 +5,7 @@
 #
 
 # Name of this project
-name: template-project
+name: jetpackcompose-pokemon
 
 email:
   support: support@hadenlabs.com
@@ -17,22 +17,22 @@ email:
 license: "LGPL-3.0"
 
 # Canonical GitHub repo
-github_repo: luismayta/template-project
+github_repo: luismayta/jetpackcompose-pokemon
 
 # Badges to display
 badges:
   - name: Latest Release
-    image: https://img.shields.io/github/release/luismayta/template-project
-    url: https://github.com/luismayta/template-project/releases
+    image: https://img.shields.io/github/release/luismayta/jetpackcompose-pokemon
+    url: https://github.com/luismayta/jetpackcompose-pokemon/releases
   - name: Lint
-    image: https://img.shields.io/github/workflow/status/luismayta/template-project/lint-code
-    url: https://github.com/luismayta/template-project/actions?workflow=lint-code
+    image: https://img.shields.io/github/workflow/status/luismayta/jetpackcompose-pokemon/lint-code
+    url: https://github.com/luismayta/jetpackcompose-pokemon/actions?workflow=lint-code
   - name: CI
-    image: https://img.shields.io/github/workflow/status/luismayta/template-project/ci
-    url: https://github.com/luismayta/template-project/actions?workflow=ci
+    image: https://img.shields.io/github/workflow/status/luismayta/jetpackcompose-pokemon/ci
+    url: https://github.com/luismayta/jetpackcompose-pokemon/actions?workflow=ci
   - name: Test
-    image: https://img.shields.io/github/workflow/status/luismayta/template-project/test
-    url: https://github.com/luismayta/template-project/actions?workflow=test
+    image: https://img.shields.io/github/workflow/status/luismayta/jetpackcompose-pokemon/test
+    url: https://github.com/luismayta/jetpackcompose-pokemon/actions?workflow=test
   - name: pre-commit
     image: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
     url: https://github.com/pre-commit/pre-commit
@@ -54,7 +54,7 @@ requirements: |-
 # Short description of this project
 description: |-
 
-  template-project for project
+  jetpackcompose-pokemon for project
 
 usages:
   - docs/usage.md
