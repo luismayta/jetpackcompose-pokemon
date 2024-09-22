@@ -1,12 +1,15 @@
 package com.hadenlabs.jetpackcomposepokemon.model
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class PokemonList(val results: List<Pokemon>)
+data class PokemonList(
+  @SerialName("results") val results: List<Pokemon>?
+)
 
+@Serializable
 data class Pokemon(val name: String, val url: String) {
-
     val id: Int
         get() {
             val components = url.split("/")

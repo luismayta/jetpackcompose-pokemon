@@ -4,7 +4,6 @@ import com.hadenlabs.jetpackcomposepokemon.model.Pokemon
 import com.hadenlabs.jetpackcomposepokemon.model.PokemonList
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
-import io.ktor.client.statement.*
 import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
@@ -14,8 +13,8 @@ import io.ktor.client.request.get
 import io.ktor.client.request.header
 import io.ktor.client.request.parameter
 import io.ktor.client.request.url
-import io.ktor.client.statement.HttpResponse
 import io.ktor.serialization.kotlinx.json.*
+import kotlinx.serialization.json.Json
 
 object PokemonAPI {
 
@@ -30,10 +29,10 @@ object PokemonAPI {
         url("https://pokeapi.co/api/v2/")
       }
       install(ContentNegotiation) {
-        json()
+        json(Json { ignoreUnknownKeys = true })
       }
       install(Logging) {
-        level = LogLevel.INFO
+        level = LogLevel.ALL
       }
     }
     return client
@@ -41,12 +40,12 @@ object PokemonAPI {
 
   suspend fun loadPokemon(
     success: (pokemonList: List<Pokemon>) -> Unit,
-    failure: () -> Unit
+    failure: (error: String) -> Unit
   ) {
 
     val client = getClient()
     try {
-      val response: PokemonList  = client.get{
+      val response: PokemonList = client.get {
         url("pokemon")
         parameter("limit", 151)
       }.body()
@@ -56,7 +55,9 @@ object PokemonAPI {
       )
 
     } catch (e: Exception) {
-      failure()
+
+      e.printStackTrace()
+      failure(e.localizedMessage ?: "Error not recognized")
     } finally {
       client.close()
     }
