@@ -2,39 +2,64 @@ package com.hadenlabs.jetpackcomposepokemon.api
 
 import com.hadenlabs.jetpackcomposepokemon.model.Pokemon
 import com.hadenlabs.jetpackcomposepokemon.model.PokemonList
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.GET
+import io.ktor.client.HttpClient
+import io.ktor.client.call.body
+import io.ktor.client.statement.*
+import io.ktor.client.engine.cio.CIO
+import io.ktor.client.plugins.HttpTimeout
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.client.plugins.defaultRequest
+import io.ktor.client.plugins.logging.*
+import io.ktor.client.request.get
+import io.ktor.client.request.header
+import io.ktor.client.request.parameter
+import io.ktor.client.request.url
+import io.ktor.client.statement.HttpResponse
+import io.ktor.serialization.kotlinx.json.*
 
 object PokemonAPI {
 
-    interface PokemonAPI {
-
-        @GET("pokemon?limit=151")
-        fun loadPokemon(): Call<PokemonList>
-
+  fun getClient(): HttpClient {
+    val client = HttpClient(CIO) {
+      install(HttpTimeout) {
+        socketTimeoutMillis = 60_000
+        requestTimeoutMillis = 60_000
+      }
+      defaultRequest {
+        header("Content-Type", "application/json")
+        url("https://pokeapi.co/api/v2/")
+      }
+      install(ContentNegotiation) {
+        json()
+      }
+      install(Logging) {
+        level = LogLevel.INFO
+      }
     }
+    return client
+  }
 
-    fun loadPokemon(success: (pokemonList: List<Pokemon>) -> Unit, failure: () -> Unit) {
+  suspend fun loadPokemon(
+    success: (pokemonList: List<Pokemon>) -> Unit,
+    failure: () -> Unit
+  ) {
 
-        val retrofit = Retrofit.Builder().baseUrl("https://pokeapi.co/api/v2/")
-            .addConverterFactory(GsonConverterFactory.create()).build()
-        val service = retrofit.create(PokemonAPI::class.java)
+    val client = getClient()
+    try {
+      val response: PokemonList  = client.get{
+        url("pokemon")
+        parameter("limit", 151)
+      }.body()
 
-        service.loadPokemon().enqueue(object: Callback<PokemonList> {
+      success(
+        response.results ?: listOf()
+      )
 
-            override fun onResponse(call: Call<PokemonList>, response: Response<PokemonList>) {
-                success(response.body()?.results ?: listOf())
-            }
-
-            override fun onFailure(call: Call<PokemonList>, t: Throwable) {
-                failure()
-            }
-
-        })
+    } catch (e: Exception) {
+      failure()
+    } finally {
+      client.close()
     }
+  }
 
 }
