@@ -23,5 +23,6 @@ out
 .venv
 contrib/
 site/
+app/build
 .external_modules
 CHANGELOG.md
