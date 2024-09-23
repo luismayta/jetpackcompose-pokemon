@@ -1,0 +1,46 @@
+version: "3"
+
+tasks:
+  default:
+    desc: Show commands android
+    run: once
+    silent: true
+    cmds:
+      - cmd: task -l
+
+  check:
+    desc: Exist android and dependences
+    deps:
+      - task: check:vars
+
+  check:vars:
+    desc: Exist vars of android
+    run: once
+    preconditions:
+      - sh: test -v ANDROID_HOME
+        msg: "Please add var environment ANDROID_HOME"
+
+  environment:
+    desc: Generate environment android
+    run: once
+    cmds:
+      - mkdir -p {{.PACKAGE_PATH}}/core
+      - mkdir -p {{.PACKAGE_PATH}}/data/datasource/{local,remote}
+      - mkdir -p {{.PACKAGE_PATH}}/data/model
+      - mkdir -p {{.PACKAGE_PATH}}/data/repository
+      - mkdir -p {{.PACKAGE_PATH}}/domain/model
+      - mkdir -p {{.PACKAGE_PATH}}/domain/repository
+      - mkdir -p {{.PACKAGE_PATH}}/domain/usecase
+
+      - mkdir -p {{.PACKAGE_PATH}}/di
+      - mkdir -p {{.PACKAGE_PATH}}/presentation
+
+      - mkdir -p {{.PACKAGE_PATH}}/ui
+      - mkdir -p {{.PACKAGE_PATH}}/ui/components
+      - mkdir -p {{.PACKAGE_PATH}}/ui/theme
+      - mkdir -p {{.PACKAGE_PATH}}/ui/preview
+      - mkdir -p {{.PACKAGE_PATH}}/ui/navigation
+      - mkdir -p {{.PACKAGE_PATH}}/ui/screen
+      - mkdir -p {{.PACKAGE_PATH}}/ui/screen/splash
+    deps:
+      - task: check
