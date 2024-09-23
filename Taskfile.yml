@@ -2,6 +2,7 @@
 version: "3"
 
 includes:
+  android: ./provision/task/android.yml
   changelog: ./provision/task/changelog.yml
   confluence: ./provision/task/confluence.yml
   python: ./provision/task/python.yml
@@ -14,27 +15,8 @@ includes:
   sonar: ./provision/task/sonar.yml
   diagrams: ./provision/diagrams/Taskfile.yml
 
-env:
-  DOCKER:
-    sh: docker --version 2> /dev/null || echo "not exist"
-  PYTHON:
-    sh: python --version 2> /dev/null || echo "not exist"
-  GO:
-    sh: go version 2> /dev/null || echo "not exist"
-  NODE:
-    sh: node --version 2> /dev/null || echo "not exist"
-  APP_TAG:
-    sh: git describe --tags $(git rev-list --tags --max-count=1) 2> /dev/null || echo "0.0.0"
-  README_YAML: provision/generators/README.yaml
-  README_TEMPLATE: provision/templates/README.tpl.md
-  README_INCLUDES: file://
-
-dotenv:
-  - .env
-
 vars:
   PROJECT_NAME: jetpackcompose-pokemon
-  ORGANIZATION: luismayta
   DOCKER_PLATFORM: linux/amd64
   REVIEWERS: luismayta
   PYTHON_VERSION: 3.11.5
@@ -60,6 +42,32 @@ vars:
     vendor
     .java-version
     local.properties
+
+env:
+  DOCKER:
+    sh: docker --version 2> /dev/null || echo "not exist"
+  PYTHON:
+    sh: python --version 2> /dev/null || echo "not exist"
+  GO:
+    sh: go version 2> /dev/null || echo "not exist"
+  NODE:
+    sh: node --version 2> /dev/null || echo "not exist"
+  APP_TAG:
+    sh: git describe --tags $(git rev-list --tags --max-count=1) 2> /dev/null || echo "0.0.0"
+  ORGANIZATION:
+    sh: echo luismayta
+  PACKAGE_NAME:
+    sh: echo jetpackcomposepokemon
+  APP_SRC:
+    sh: echo app/src/main/java
+  PACKAGE_PATH:
+    sh: echo {{ .APP_SRC }}/com/{{ .ORGANIZATION }}/{{ .PACKAGE_NAME }}
+  README_YAML: provision/generators/README.yaml
+  README_TEMPLATE: provision/templates/README.tpl.md
+  README_INCLUDES: file://
+
+dotenv:
+  - .env
 
 tasks:
   default:
@@ -133,3 +141,4 @@ tasks:
     desc: Setup environment of project
     cmds:
       - task: python:environment
+      - task: android:environment
