@@ -1,9 +1,9 @@
-package com.hadenlabs.jetpackcomposepokemon.ui.list
+package com.luismayta.jetpackcomposepokemon.presentation.pokemonlist
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.hadenlabs.jetpackcomposepokemon.api.PokemonAPI
-import com.hadenlabs.jetpackcomposepokemon.model.Pokemon
+import com.luismayta.jetpackcomposepokemon.data.datasource.remote.PokemonAPI
+import com.luismayta.jetpackcomposepokemon.domain.model.Pokemon
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

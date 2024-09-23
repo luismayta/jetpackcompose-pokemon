@@ -1,4 +1,4 @@
-package com.hadenlabs.jetpackcomposepokemon.model
+package com.luismayta.jetpackcomposepokemon.domain.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

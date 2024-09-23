@@ -1,4 +1,4 @@
-package com.hadenlabs.jetpackcomposepokemon.ui.list
+package com.luismayta.jetpackcomposepokemon.presentation.pokemonlist
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -9,7 +9,8 @@ import androidx.compose.runtime.*
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.hadenlabs.jetpackcomposepokemon.ui.theme.JetpackComposePokemonTheme
+import com.luismayta.jetpackcomposepokemon.ui.components.PokemonCell
+import com.luismayta.jetpackcomposepokemon.ui.theme.JetpackComposePokemonTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

@@ -1,4 +1,4 @@
-package com.hadenlabs.jetpackcomposepokemon.ui.theme
+package com.luismayta.jetpackcomposepokemon.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

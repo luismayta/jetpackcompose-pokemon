@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.hadenlabs.composehelloworld"
+    namespace = "com.luismayta.composehelloworld"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.hadenlabs.jetpackcomposepokemon"
+        applicationId = "com.luismayta.jetpackcomposepokemon"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
