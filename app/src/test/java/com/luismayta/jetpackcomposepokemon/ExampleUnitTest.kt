@@ -1,4 +1,4 @@
-package com.hadenlabs.jetpackcomposepokemon
+package com.luismayta.jetpackcomposepokemon
 
 import org.junit.Test
 

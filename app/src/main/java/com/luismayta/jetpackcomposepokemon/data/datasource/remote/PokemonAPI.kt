@@ -1,7 +1,7 @@
-package com.hadenlabs.jetpackcomposepokemon.api
+package com.luismayta.jetpackcomposepokemon.data.datasource.remote
 
-import com.hadenlabs.jetpackcomposepokemon.model.Pokemon
-import com.hadenlabs.jetpackcomposepokemon.model.PokemonList
+import com.luismayta.jetpackcomposepokemon.domain.model.Pokemon
+import com.luismayta.jetpackcomposepokemon.domain.model.PokemonList
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.engine.cio.CIO
@@ -39,8 +39,8 @@ object PokemonAPI {
   }
 
   suspend fun loadPokemon(
-    success: (pokemonList: List<Pokemon>) -> Unit,
-    failure: (error: String) -> Unit
+      success: (pokemonList: List<Pokemon>) -> Unit,
+      failure: (error: String) -> Unit
   ) {
 
     val client = getClient()
