@@ -6,7 +6,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.*
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.luismayta.jetpackcomposepokemon.ui.components.PokemonCell
@@ -14,7 +13,7 @@ import com.luismayta.jetpackcomposepokemon.ui.theme.JetpackComposePokemonTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun PokemonListScreen(viewModel: PokemonListViewModel = viewModel()) {
+fun PokemonListScreen(viewModel: PokemonListViewModel = hiltViewModel()) {
   val pokemonList by viewModel.pokemonList.collectAsState()
   val isError by viewModel.isError.collectAsState()
 

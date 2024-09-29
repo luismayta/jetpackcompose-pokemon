@@ -1,66 +1,26 @@
 package com.luismayta.jetpackcomposepokemon.data.datasource.remote
 
-import com.luismayta.jetpackcomposepokemon.domain.model.Pokemon
-import com.luismayta.jetpackcomposepokemon.domain.model.PokemonList
+import com.luismayta.jetpackcomposepokemon.core.Constants
+import com.luismayta.jetpackcomposepokemon.domain.model.responses.PokemonList
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
-import io.ktor.client.engine.cio.CIO
-import io.ktor.client.plugins.HttpTimeout
-import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
-import io.ktor.client.plugins.defaultRequest
-import io.ktor.client.plugins.logging.*
+import io.ktor.client.request.accept
 import io.ktor.client.request.get
-import io.ktor.client.request.header
-import io.ktor.client.request.parameter
-import io.ktor.client.request.url
-import io.ktor.serialization.kotlinx.json.*
-import kotlinx.serialization.json.Json
+import io.ktor.http.ContentType
+import io.ktor.http.appendPathSegments
+import javax.inject.Inject
 
-object PokemonAPI {
+class PokemonAPI @Inject constructor(
+  private val httpClient: HttpClient
+) {
 
-  fun getClient(): HttpClient {
-    val client = HttpClient(CIO) {
-      install(HttpTimeout) {
-        socketTimeoutMillis = 60_000
-        requestTimeoutMillis = 60_000
-      }
-      defaultRequest {
-        header("Content-Type", "application/json")
-        url("https://pokeapi.co/api/v2/")
-      }
-      install(ContentNegotiation) {
-        json(Json { ignoreUnknownKeys = true })
-      }
-      install(Logging) {
-        level = LogLevel.ALL
-      }
+  suspend fun getPokemonData(): PokemonList = httpClient.get(Constants.Endpoints.ENDPOINT) {
+
+    accept(ContentType.Application.Json)
+    url {
+      appendPathSegments(Constants.Endpoints.CARDS)
+      parameters.append(Constants.Endpoints.PAGE_SIZE, "20")
     }
-    return client
-  }
-
-  suspend fun loadPokemon(
-      success: (pokemonList: List<Pokemon>) -> Unit,
-      failure: (error: String) -> Unit
-  ) {
-
-    val client = getClient()
-    try {
-      val response: PokemonList = client.get {
-        url("pokemon")
-        parameter("limit", 151)
-      }.body()
-
-      success(
-        response.results ?: listOf()
-      )
-
-    } catch (e: Exception) {
-
-      e.printStackTrace()
-      failure(e.localizedMessage ?: "Error not recognized")
-    } finally {
-      client.close()
-    }
-  }
+  }.body()
 
 }
