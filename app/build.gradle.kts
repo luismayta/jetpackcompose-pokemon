@@ -76,9 +76,11 @@ dependencies {
     implementation(libs.ktor.client.content.negotiation)
     implementation(libs.ktor.serialization.kotlinx.json)
     implementation(libs.ktor.client.encoding)
-//  dagger hilt
+
+  //dagger
     implementation(libs.hilt.android)
-    implementation(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+    ksp(libs.hilt.compiler)
 
 //  test
     testImplementation(libs.junit)

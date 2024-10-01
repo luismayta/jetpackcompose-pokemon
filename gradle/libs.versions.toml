@@ -1,6 +1,7 @@
 [versions]
 agp = "8.6.1"
-kotlin = "1.9.25"
+kotlin = "1.9.22"
+ksp = "1.9.22-1.0.16"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -13,8 +14,8 @@ ktor = "2.3.12"
 lifecycleViewmodelCompose = "2.8.6"
 kotlinxSerialization = "1.7.3"
 serializationPlugin = "1.9.25"
+androidxHiltNavigationCompose = "1.2.0"
 hilt = '2.51.1'
-ksp = "2.0.20-1.0.24"
 
 [libraries]
 
@@ -50,9 +51,10 @@ androidx-lifecycle-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx"
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
 
-#hilt
+#dagger
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
-hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
 
 # JUnit
 junit = { group = "junit", name = "junit", version.ref = "junit" }
