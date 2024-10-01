@@ -1,15 +1,6 @@
 package com.luismayta.jetpackcomposepokemon.domain.model
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
-
-@Serializable
-data class PokemonList(
-  @SerialName("results") val results: List<Pokemon>?
-)
-
-@Serializable
-data class Pokemon(val name: String, val url: String) {
+data class PokemonModel(val name: String, val url: String) {
     val id: Int
         get() {
             val components = url.split("/")
