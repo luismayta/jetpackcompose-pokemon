@@ -15,7 +15,7 @@ lifecycleViewmodelCompose = "2.8.6"
 kotlinxSerialization = "1.7.3"
 serializationPlugin = "1.9.25"
 androidxHiltNavigationCompose = "1.2.0"
-hilt = '2.51.1'
+hilt = '2.52'
 
 [libraries]
 
