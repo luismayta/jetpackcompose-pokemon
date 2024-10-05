@@ -4,11 +4,11 @@ kotlin = "1.9.22"
 ksp = "1.9.25-1.0.20"
 coreKtx = "1.13.1"
 junit = "4.13.2"
-junitVersion = "1.2.1"
+androidxJunit = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.6"
 activityCompose = "1.9.2"
-composeBom = "2024.09.03"
+androidxComposeBom="2024.09.03"
 coil = "2.7.0"
 ktor = "2.3.12"
 lifecycleViewmodelCompose = "2.8.6"
@@ -38,7 +38,7 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 
 # AndroidX Compose
-androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
@@ -70,12 +70,9 @@ navigation-dynamic = { module = "androidx.navigation:navigation-dynamic-features
 # Testing Navigation
 navigation-testing = { module = "androidx.navigation:navigation-testing", version.ref = "navigation" }
 
-#navigation safeargs
-navigation-safe-args-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigation" }
-
 # JUnit
 junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxJunit" }
 
 [plugins]
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -84,4 +81,5 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serializationPlugin" }
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+navigation-safe-args-plugin = { id = "androidx.navigation.navigation-safe-args-gradle-plugin", version.ref = "navigation" }
 [bundles]
