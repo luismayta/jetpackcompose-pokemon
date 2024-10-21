@@ -1,4 +1,5 @@
 package com.luismayta.jetpackcomposepokemon.domain.model
+import com.luismayta.jetpackcomposepokemon.core.Constants
 
 data class PokemonModel(val name: String, val url: String) {
     val id: Int
@@ -8,5 +9,5 @@ data class PokemonModel(val name: String, val url: String) {
         }
 
     val imageUrl: String
-        get() = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/$id.png"
+        get() =  "${Constants.Endpoints.IMAGES_URL}/${id}.png"
 }
