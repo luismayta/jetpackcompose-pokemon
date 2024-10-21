@@ -16,7 +16,7 @@ androidxHiltNavigationCompose = "1.2.0"
 hilt = '2.52'
 navigationCompose = "2.8.2"
 kotlinxSerialization = "1.6.3"
-kotlinParcelize = "1.8.10"
+kotlinParcelize = "1.9.25"
 
 [libraries]
 
