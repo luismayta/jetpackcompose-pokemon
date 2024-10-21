@@ -9,4 +9,4 @@ object Login
 object Home
 
 @Serializable
-data class Detail(val id: String)
+data class Detail(val name: String)

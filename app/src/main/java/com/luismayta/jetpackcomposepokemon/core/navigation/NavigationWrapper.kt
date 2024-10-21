@@ -5,9 +5,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
-import com.luismayta.jetpackcomposepokemon.presentation.screen.homeScreen.HomeScreen
-import com.luismayta.jetpackcomposepokemon.presentation.screen.loginScreen.LoginScreen
-import com.luismayta.jetpackcomposepokemon.presentation.screen.detailScreen.DetailScreen
+import com.luismayta.jetpackcomposepokemon.presentation.screen.home.HomeScreen
+import com.luismayta.jetpackcomposepokemon.presentation.screen.login.LoginScreen
+import com.luismayta.jetpackcomposepokemon.presentation.screen.detail.DetailScreen
 
 @Composable
 fun NavigationWrapper() {
@@ -18,13 +18,13 @@ fun NavigationWrapper() {
     }
 
     composable<Home> {
-      HomeScreen { id -> navController.navigate(Detail(id = id)) }
+      HomeScreen { name -> navController.navigate(Detail(name = name)) }
     }
 
     composable<Detail> { backStackEntry ->
       val detail: Detail = backStackEntry.toRoute()
       DetailScreen(
-        id = detail.id
+        name = detail.name
       ) {
         navController.navigate(Login) {
           popUpTo<Login> { inclusive = true }

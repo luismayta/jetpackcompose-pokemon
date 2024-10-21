@@ -7,8 +7,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.*
 import androidx.compose.ui.Modifier
 import com.luismayta.jetpackcomposepokemon.core.navigation.NavigationWrapper
-import com.luismayta.jetpackcomposepokemon.presentation.screen.loginScreen.LoginScreen
-import com.luismayta.jetpackcomposepokemon.presentation.screen.pokemonlistscreen.PokemonListScreen
 import com.luismayta.jetpackcomposepokemon.ui.theme.JetpackComposePokemonTheme
 import dagger.hilt.android.AndroidEntryPoint
 

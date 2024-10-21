@@ -1,4 +1,4 @@
-package com.luismayta.jetpackcomposepokemon.presentation.screen.loginScreen
+package com.luismayta.jetpackcomposepokemon.presentation.screen.login
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer

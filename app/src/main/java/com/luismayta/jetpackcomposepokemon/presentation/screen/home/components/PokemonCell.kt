@@ -1,6 +1,7 @@
-package com.luismayta.jetpackcomposepokemon.presentation.screen.pokemonlistscreen.components
+package com.luismayta.jetpackcomposepokemon.presentation.screen.home.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme
@@ -17,19 +18,21 @@ import coil.compose.AsyncImage
 import com.luismayta.jetpackcomposepokemon.domain.model.PokemonModel
 
 @Composable
-fun PokemonCell(pokemon: PokemonModel) {
+fun PokemonCell(pokemon: PokemonModel, onClick: (PokemonModel) -> Unit) {
   Row(
     verticalAlignment = Alignment.CenterVertically,
-    modifier = Modifier.padding(8.dp)
+    modifier = Modifier
+      .clickable { onClick(pokemon) }
+      .padding(16.dp)
   ) {
     AsyncImage(
       model = pokemon.imageUrl,
       "Pokémon image",
       modifier = Modifier
-          .size(60.dp)
-          .clip(CircleShape)
-          .background(Color.Gray.copy(alpha = 0.1f))
-          .padding(8.dp)
+        .size(60.dp)
+        .clip(CircleShape)
+        .background(Color.Gray.copy(alpha = 0.1f))
+        .padding(8.dp)
     )
     Text(
       "#${pokemon.id}",
@@ -54,7 +57,9 @@ fun PokemonCellPreview() {
     PokemonModel(name = "bulbasaur", url = "https://pokeapi.co/api/v2/pokemon/1/")
 
   return PokemonCell(
-    pokemon = dataPokemonModel
+    pokemon = dataPokemonModel, onClick = { pokemon ->
+      println("Clicked on ${pokemon.name}")
+    }
   )
 
 }
