@@ -1,6 +1,6 @@
 [versions]
 agp = "8.7.2"
-kotlin = "1.9.25"
+kotlin = "2.1.0"
 ksp = "1.9.25-1.0.20"
 coreKtx = "1.15.0"
 junit = "4.13.2"
@@ -16,7 +16,7 @@ androidxHiltNavigationCompose = "1.2.0"
 hilt = '2.52'
 navigationCompose = "2.8.4"
 kotlinxSerialization = "1.7.3"
-kotlinParcelize = "1.9.25"
+kotlinParcelize = "2.1.0"
 
 [libraries]
 
