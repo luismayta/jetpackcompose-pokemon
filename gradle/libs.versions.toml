@@ -14,7 +14,7 @@ ktor = "2.3.13"
 lifecycleViewmodelCompose = "2.8.7"
 androidxHiltNavigationCompose = "1.2.0"
 hilt = '2.52'
-navigationCompose = "2.8.4"
+navigationCompose = "2.8.7"
 kotlinxSerialization = "1.7.3"
 kotlinParcelize = "1.9.25"
 
